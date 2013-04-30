@@ -47,6 +47,20 @@ namespace Wp7Shared.UserControls
         private void InitApps()
         {
             _knownApps = new List<MyHubTile>() {
+                       
+                        new MyHubTile()
+                        {
+                            Tag = "Memessenger+",
+                            SupportedCultures = new List<string>() { "it", "en" },
+                            Guid = new Guid("dc0a8ce0-dd4f-4a92-b2b7-81c1709f389f"),
+                            Height = 175,
+                            Width = 175,
+                            Title = "Memessenger+",
+                            Source = new BitmapImage(new Uri("../Resources/Memessenger+.png", UriKind.Relative)),
+                            FontSize = 12,
+                            Style = (Style)this.Resources["HubTileStyle1"],
+                            GroupTag = "apps"
+                        },
                         new MyHubTile()
                         {
                             Tag = "Memessenger",
@@ -114,19 +128,6 @@ namespace Wp7Shared.UserControls
                         },
                         new MyHubTile()
                         {
-                            Tag = "MusicStation",
-                            SupportedCultures = new List<string>() { "it", "en", "es" },
-                            Guid = new Guid("b9298255-f2a4-4dc5-afc1-568cb4413e03"),
-                            Height = 175,
-                            Width = 175,
-                            Title = "MusicStation",
-                            Source = new BitmapImage(new Uri("../Resources/MusicStation.png", UriKind.Relative)),
-                            FontSize = 12,
-                            Style = (Style)this.Resources["HubTileStyle1"],
-                            GroupTag = "apps"
-                        },
-                        new MyHubTile()
-                        {
                             Tag = "ScaleFinder",
                             SupportedCultures = new List<string>() { "it", "en", "es" },
                             Guid = new Guid("35827306-ffc5-41d6-ba7c-467e03b61c2f"),
@@ -137,20 +138,33 @@ namespace Wp7Shared.UserControls
                             FontSize = 12,
                             Style = (Style)this.Resources["HubTileStyle1"],
                             GroupTag = "apps"
-                        },
-                        new MyHubTile()
-                        {
-                            Tag = "TempoStation",
-                            SupportedCultures = new List<string>() { "it", "en" },
-                            Guid = new Guid("253a9c97-546f-40ed-be0e-6be265788be4"),
-                            Height = 175,
-                            Width = 175,
-                            Title = "TempoStation",
-                            Source = new BitmapImage(new Uri("../Resources/TempoStation.png", UriKind.Relative)),
-                            FontSize = 12,
-                            Style = (Style)this.Resources["HubTileStyle1"],
-                            GroupTag = "apps"
                         }
+                        //new MyHubTile()
+                        //{
+                        //    Tag = "MusicStation",
+                        //    SupportedCultures = new List<string>() { "it", "en", "es" },
+                        //    Guid = new Guid("b9298255-f2a4-4dc5-afc1-568cb4413e03"),
+                        //    Height = 175,
+                        //    Width = 175,
+                        //    Title = "MusicStation",
+                        //    Source = new BitmapImage(new Uri("../Resources/MusicStation.png", UriKind.Relative)),
+                        //    FontSize = 12,
+                        //    Style = (Style)this.Resources["HubTileStyle1"],
+                        //    GroupTag = "apps"
+                        //},
+                        //new MyHubTile()
+                        //{
+                        //    Tag = "TempoStation",
+                        //    SupportedCultures = new List<string>() { "it", "en" },
+                        //    Guid = new Guid("253a9c97-546f-40ed-be0e-6be265788be4"),
+                        //    Height = 175,
+                        //    Width = 175,
+                        //    Title = "TempoStation",
+                        //    Source = new BitmapImage(new Uri("../Resources/TempoStation.png", UriKind.Relative)),
+                        //    FontSize = 12,
+                        //    Style = (Style)this.Resources["HubTileStyle1"],
+                        //    GroupTag = "apps"
+                        //}
             };
         }
 
