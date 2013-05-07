@@ -122,8 +122,9 @@
     <Compile Include="Helpers\GenericHelper.cs" />
     <Compile Include="Helpers\LogHelper.cs" />
     <Compile Include="Helpers\MyVisualTreeHelper.cs" />
-    <Compile Include="Media\YouTube.cs" />
-    <Compile Include="Media\YouTubeQuality.cs" />
+    <Compile Include="Media\MyYouTube.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ObservableEx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sensors\ShakeDetector.cs" />

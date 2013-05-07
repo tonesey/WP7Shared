@@ -22,7 +22,7 @@ using MyToolkit.UI;
 
 namespace MyToolkit.Multimedia
 {
-	public static class YouTube
+	public static class MyYouTube
 	{
 
 #if WINRT
@@ -104,7 +104,7 @@ namespace MyToolkit.Multimedia
 
             var url = "https://www.youtube.com/watch?v=" + youTubeId + "&nomobile=1";
 
-            MessageBox.Show("downloading video from: " + url);
+            //MessageBox.Show("downloading video from: " + url);
 
             return Http.Get(url,
                r => OnHtmlDownloaded(r, minQuality, maxQuality, completed));
