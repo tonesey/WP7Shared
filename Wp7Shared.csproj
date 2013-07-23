@@ -72,7 +72,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNOINTERNET|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\DebugNOINTERNET\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;WP7</DefineConstants>
     <NoStdLib>true</NoStdLib>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -112,6 +112,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
     <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviours\LoadedBehaviour.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Converters\ProgBarConverter.cs" />
     <Compile Include="Converters\VisibilityConverter.cs" />
     <Compile Include="Exceptions\ForcedExitException.cs" />
+    <Compile Include="Helpers\AppInfosHelper.cs" />
     <Compile Include="Helpers\GenericHelper.cs" />
     <Compile Include="Helpers\LogHelper.cs" />
     <Compile Include="Helpers\MyVisualTreeHelper.cs" />
@@ -173,6 +175,9 @@
     <Resource Include="Resources\Memessenger.png" />
     <Resource Include="Resources\Pingu.png" />
     <Resource Include="Resources\Memessenger+.png" />
+    <Resource Include="Resources\PeppaPig_en.png" />
+    <Resource Include="Resources\PeppaPig_it.png" />
+    <Resource Include="Resources\Banane.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
   <ItemGroup>

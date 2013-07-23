@@ -13,9 +13,20 @@ using System.Collections.Generic;
 
 namespace Wp7Shared.UserControls
 {
+
+    public enum Genre
+    {
+        Undefined,
+        Enterteninment,
+        KidsAndFamily,
+        Music,
+        Social
+    }
+
     public class MyHubTile : HubTile
     {
         public List<string> SupportedCultures { get; set; }
         public Guid Guid { get; set; }
+        public Genre Genre { get; set; }
     }
 }
