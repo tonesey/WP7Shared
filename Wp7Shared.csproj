@@ -121,9 +121,13 @@
     <Compile Include="Converters\VisibilityConverter.cs" />
     <Compile Include="Exceptions\ForcedExitException.cs" />
     <Compile Include="Helpers\AppInfosHelper.cs" />
-    <Compile Include="Helpers\GenericHelper.cs" />
+    <Compile Include="Helpers\FeedbackHelper.cs" />
     <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\LowMemoryHelper.cs" />
     <Compile Include="Helpers\MyVisualTreeHelper.cs" />
+    <Compile Include="Helpers\NavigationHelper.cs" />
+    <Compile Include="Helpers\PhoneNameResolver.cs" />
+    <Compile Include="Helpers\StorageHelper.cs" />
     <Compile Include="Media\MyYouTube.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -135,6 +139,7 @@
     <Compile Include="UserControls\OtherApps.xaml.cs">
       <DependentUpon>OtherApps.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utility\GenericUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="UserControls\OtherApps.xaml">
@@ -178,6 +183,12 @@
     <Resource Include="Resources\PeppaPig_en.png" />
     <Resource Include="Resources\PeppaPig_it.png" />
     <Resource Include="Resources\Banane.png" />
+    <Resource Include="Resources\PeppaPig_es.png" />
+    <Resource Include="Resources\PeppaPig_pt.png" />
+    <Resource Include="Resources\MyLittlePony.png" />
+    <Resource Include="Resources\PeppaPig_ru.png" />
+    <Resource Include="Resources\Puffi.png" />
+    <Resource Include="Resources\CinicoTV.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
   </ItemGroup>
   <ItemGroup>

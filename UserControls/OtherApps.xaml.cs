@@ -59,6 +59,76 @@ namespace Wp7Shared.UserControls
                         },
                         new MyHubTile()
                         {
+                            Tag = "Peppa Pig (es)",
+                            SupportedCultures = new List<string>() { "es" },
+                            Guid = new Guid("7a105e28-8fcf-4a35-85c9-0f3a311c9fa9"),
+                            Height = 175,
+                            Width = 175,
+                            Title = "Peppa Pig (es)",
+                            Source = new BitmapImage(new Uri("../Resources/PeppaPig_es.png", UriKind.Relative)),
+                            FontSize = 12,
+                            Style = (Style)this.Resources["HubTileStyle1"],
+                            GroupTag = "apps",
+                            Genre = Genre.KidsAndFamily
+                        },
+                        new MyHubTile()
+                        {
+                            Tag = "Peppa Pig (pt)",
+                            SupportedCultures = new List<string>() { "es" },
+                            Guid = new Guid("137819c7-c4f7-4334-9966-8dc91f51c0e2"),
+                            Height = 175,
+                            Width = 175,
+                            Title = "Peppa Pig (pt)",
+                            Source = new BitmapImage(new Uri("../Resources/PeppaPig_pt.png", UriKind.Relative)),
+                            FontSize = 12,
+                            Style = (Style)this.Resources["HubTileStyle1"],
+                            GroupTag = "apps",
+                            Genre = Genre.KidsAndFamily
+                        },
+                        new MyHubTile()
+                        {
+                            Tag = "Peppa Pig (ru)",
+                            SupportedCultures = new List<string>() { "ru" },
+                            Guid = new Guid("81ae7f1f-a14c-4a67-9126-19039793ccad"),
+                            Height = 175,
+                            Width = 175,
+                            Title = "Peppa Pig (ru)",
+                            Source = new BitmapImage(new Uri("../Resources/PeppaPig_ru.png", UriKind.Relative)),
+                            FontSize = 12,
+                            Style = (Style)this.Resources["HubTileStyle1"],
+                            GroupTag = "apps",
+                            Genre = Genre.KidsAndFamily
+                        },
+                        new MyHubTile()
+                        {
+                            Tag = "I Puffi",
+                            SupportedCultures = new List<string>() { "it" },
+                            Guid = new Guid("9f58b7d1-77c1-4f03-af44-514a69bf6722"),
+                            Height = 175,
+                            Width = 175,
+                            Title = "I Puffi",
+                            Source = new BitmapImage(new Uri("../Resources/Puffi.png", UriKind.Relative)),
+                            FontSize = 12,
+                            Style = (Style)this.Resources["HubTileStyle1"],
+                            GroupTag = "apps",
+                            Genre = Genre.KidsAndFamily
+                        },
+                        new MyHubTile()
+                        {
+                            Tag = "My Little Pony",
+                            SupportedCultures = new List<string>() { "en" },
+                            Guid = new Guid("85a37e84-9188-428b-b58b-9822cb16cb5c"),
+                            Height = 175,
+                            Width = 175,
+                            Title = "My Little Pony",
+                            Source = new BitmapImage(new Uri("../Resources/MyLittlePony.png", UriKind.Relative)),
+                            FontSize = 12,
+                            Style = (Style)this.Resources["HubTileStyle1"],
+                            GroupTag = "apps",
+                            Genre = Genre.KidsAndFamily
+                        },
+                        new MyHubTile()
+                        {
                             Tag = "Memessenger+",
                             SupportedCultures = new List<string>() { "it", "en" },
                             Guid = new Guid("dc0a8ce0-dd4f-4a92-b2b7-81c1709f389f"),
@@ -158,7 +228,7 @@ namespace Wp7Shared.UserControls
                         new MyHubTile()
                         {
                             Tag = "Banane",
-                            SupportedCultures = new List<string>() { "it"},
+                            SupportedCultures = new List<string>() { "it" },
                             Guid = new Guid("d6ca939f-bfb9-4847-a3c2-284b36885a77"),
                             Height = 175,
                             Width = 175,
@@ -168,7 +238,21 @@ namespace Wp7Shared.UserControls
                             Style = (Style)this.Resources["HubTileStyle1"],
                             GroupTag = "apps",
                             Genre = Genre.KidsAndFamily
-                        }
+                        },
+                        new MyHubTile()
+                        {
+                            Tag = "Cinico TV",
+                            SupportedCultures = new List<string>() { "it" },
+                            Guid = new Guid("53d7c817-dff0-46da-be21-718b834fdf10"),
+                            Height = 175,
+                            Width = 175,
+                            Title = "Cinico TV",
+                            Source = new BitmapImage(new Uri("../Resources/CinicoTV.png", UriKind.Relative)),
+                            FontSize = 12,
+                            Style = (Style)this.Resources["HubTileStyle1"],
+                            GroupTag = "apps",
+                            Genre = Genre.Enterteninment
+                        },
             };
         }
 
@@ -182,15 +266,13 @@ namespace Wp7Shared.UserControls
         {
             mainPanel.Children.Clear();
 
-            //var currentCultureSupportedApps = _knownApps.Where(a => a.Guid != _curAppGuid
-            //                                                        &&
-            //                                                        (a.SupportedCultures.Contains("en") ||
-            //                                                         a.SupportedCultures.Contains(Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName)));
-
             var appsToShow = _knownApps.Where(a => a.Guid != _curAppGuid
                                                                     &&
                                                                     (a.SupportedCultures.Contains("en") ||
                                                                      a.SupportedCultures.Contains(Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName)));
+            //per vederle tutte
+            //var appsToShow = _knownApps.Where(a => a.Guid != _curAppGuid);
+
 
             if (_requiredGenre != Genre.Undefined)
             {

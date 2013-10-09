@@ -153,6 +153,6 @@
     	</Style>
 
     </UserControl.Resources>
-    <toolkit:WrapPanel Name="mainPanel" Background="Transparent" Width="350" Height="800">
+    <toolkit:WrapPanel Name="mainPanel" Background="Transparent">
     </toolkit:WrapPanel>
 </UserControl>
