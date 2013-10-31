@@ -12,7 +12,7 @@ using System.Collections.Generic;
 
 namespace Wp7Shared.Helpers
 {
-    public static class GenericHelper
+    public static class Extensions
     {
         public static void Shuffle<T>(this IList<T> list)
         {
@@ -27,6 +27,8 @@ namespace Wp7Shared.Helpers
                 list[n] = value;
             }
         }
+
+
 
       
 
