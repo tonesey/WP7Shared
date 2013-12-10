@@ -58,7 +58,7 @@ namespace Wp7Shared.Helpers
 
             // Uncomment for testing
             //this._state = FeedbackState.FirstReview;
-            this._state = FeedbackState.SecondReview;
+            //this._state = FeedbackState.SecondReview;
         }
 
         /// <summary>
