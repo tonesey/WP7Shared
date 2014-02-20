@@ -24,8 +24,11 @@ namespace Wp7Shared.Helpers
     {
         private const string LAUNCH_COUNT = "LAUNCH_COUNT";
         private const string REVIEWED = "REVIEWED";
-        private const int FIRST_COUNT = 5;
-        private const int SECOND_COUNT = 10;
+        //private const int FIRST_COUNT = 5;
+        //private const int SECOND_COUNT = 10;
+
+        private const int FIRST_COUNT = 3;
+        private const int SECOND_COUNT = 5;
 
         private int _launchCount = 0;
         private bool _reviewed = false;
@@ -56,9 +59,11 @@ namespace Wp7Shared.Helpers
             if (!license.IsTrial())
                 this.LoadState();
 
+#if DEBUG
             // Uncomment for testing
             //this._state = FeedbackState.FirstReview;
             //this._state = FeedbackState.SecondReview;
+#endif
         }
 
         /// <summary>

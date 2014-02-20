@@ -28,5 +28,6 @@ namespace Wp7Shared.UserControls
         public List<string> SupportedCultures { get; set; }
         public Guid Guid { get; set; }
         public Genre Genre { get; set; }
+        public bool IsHighlighted { get; set; }
     }
 }
