@@ -19,9 +19,9 @@ namespace Wp7Shared.Sensors
         private int _minimumShakes;
         ShakeRecord[] _shakeRecordList;
         private int _shakeRecordIndex = 0;
-        private const double MinimumAccelerationMagnitude = 1.2;
+        private const double MinimumAccelerationMagnitude = 0.2;
         private const double MinimumAccelerationMagnitudeSquared = MinimumAccelerationMagnitude*MinimumAccelerationMagnitude;
-        private static readonly TimeSpan MinimumShakeTime = TimeSpan.FromMilliseconds(500);
+        private static readonly TimeSpan MinimumShakeTime = TimeSpan.FromMilliseconds(50);
 
         public event EventHandler<EventArgs> ShakeEvent = null;
 
@@ -123,11 +123,13 @@ namespace Wp7Shared.Sensors
                 OnShakeEvent();
             }
         }
+
         void _accelerometer_ReadingChanged(object sender, AccelerometerReadingEventArgs e)
         {
             //Does the currenet acceleration vector meet the minimum magnitude that we
             //care about?
-            if ((e.X*e.X + e.Y*e.Y) > MinimumAccelerationMagnitudeSquared)
+            bool minShake = (e.X*e.X + e.Y*e.Y) > MinimumAccelerationMagnitudeSquared;
+            if (minShake)
             {
                 //I prefer to work in radians. For the sake of those reading this code
                 //I will work in degrees. In the following direction will contain the direction
